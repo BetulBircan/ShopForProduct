@@ -8,7 +8,7 @@
 
 <script>
 
-import RelatedItemSection from '../components/Section/RelatedItemsSection'
+import RelatedItemSection from '../components/Section/RelatedItemSection'
 
 export default {
     components : {
