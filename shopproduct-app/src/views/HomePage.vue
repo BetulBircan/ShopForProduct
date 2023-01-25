@@ -1,18 +1,18 @@
 <template>
     <h3>Anasayfa</h3>
 
-    <RelatedItemsSection />
+    <RelatedItemSection />
 
 
 </template>
 
 <script>
 
-import RelatedItemsSection from '../components/Section/RelatedItemsSection'
+import RelatedItemSection from '../components/Section/RelatedItemSection.vue'
 
 export default {
     components : {
-        RelatedItemsSection
+        RelatedItemSection
     }
 }
 </script>

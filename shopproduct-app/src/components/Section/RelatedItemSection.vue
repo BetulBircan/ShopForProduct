@@ -27,6 +27,7 @@
                  
                </div>
            </div>
+           <div class="text-center align-items-center justify-content-center"><router-link class="btn btn-outline-dark mt-auto" to="/allproducts">Tüm Ürünleri Göster</router-link></div>  
        </section>
 </template>
 
