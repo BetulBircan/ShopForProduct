@@ -1,6 +1,6 @@
 import axios from "axios"
 export const appAxios=axios.create({
-    baseURL : "http://localhost:3000",
+    baseURL : "https://shop-product.vercel.app/",
     withCredentials : false,
     headers : {
         tokenX : "myToken",
