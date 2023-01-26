@@ -30,7 +30,12 @@ const routes = [
         name : "PopularItem",
         path : "/popular",
         component : () => import("./views/PopularItem")
-     }
+    },
+    {
+        name : "UpdateProduct",
+        path : "/updateproduct/:id",
+        component : () => import("./views/UpdateProduct")
+    }
 ]
 
 const router =createRouter({
