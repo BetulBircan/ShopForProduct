@@ -13,7 +13,9 @@
                        <p class="lead"><b>Rate</b> : {{ product.rating.rate }}</p>
                        <p class="lead"><b>Count</b> : {{ product.rating.count }}</p>
                        <div class="d-flex">
-                           <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                           <input class="form-control text-center me-3" id="inputQuantity" type="num" :value="count" style="max-width: 3rem" />
+                           <button class="text-center me-0" @click="count++" > + </button>
+                            <button class=" text-center me-0" @click="count--" > - </button>
                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
                                <i class="bi-cart-fill me-1"></i>
                                Add to cart
@@ -26,6 +28,7 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
    data() {
        return {
@@ -33,6 +36,18 @@ export default {
            
        }
    },
+   setup() {
+    const count = ref(0)
+
+    // expose to template and other options API hooks
+    return {
+      count
+    }
+  },
+
+  mounted() {
+    console.log(this.count) // 0
+  },
    created() {
     
        this.$appAxios.get(`/product?id=${ this.$route.params.id}`)
