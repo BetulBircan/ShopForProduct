@@ -24,7 +24,10 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><router-link class="btn btn-outline-dark mt-auto" :to="/product/+item.id">View options</router-link></div>
+                                <div class="text-center">
+                                    <router-link class="btn btn-outline-dark mt-auto" :to="/product/+item.id">Ürün Detayı</router-link>
+                                    <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+item.id">Ürün Güncelle</router-link>
+                                </div>
                             </div>
                         </div>
                     </div>
