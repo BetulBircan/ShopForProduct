@@ -8,7 +8,7 @@
 
 <script>
 
-import RelatedItemSection from '../components/Section/RelatedItemSection'
+import RelatedItemSection from '../components/Section/RelatedItemSection.vue'
 
 export default {
     components : {
