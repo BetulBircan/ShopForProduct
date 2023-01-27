@@ -6,7 +6,7 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Ürün Fiyatı</label>
-            <input type="number" v-model="productData.price" class="form-control" id="price" placeholder="Fiyat">
+            <input type="float" v-model="productData.price" class="form-control" id="price" placeholder="Fiyat">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Ürün Açıklaması</label>
