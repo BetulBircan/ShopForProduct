@@ -13,13 +13,13 @@
                        <p class="lead"><b>Rate</b> : {{ product.rating.rate }}</p>
                        <p class="lead"><b>Count</b> : {{ product.rating.count }}</p>
                        <div class="d-flex">
-                           <input class="form-control text-center me-3" id="inputQuantity" type="num" :value="count" style="max-width: 3rem" />
-                           <button class="text-center me-0" @click="count++" > + </button>
-                            <button class=" text-center me-0" @click="count--" > - </button>
-                           <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                               <i class="bi-cart-fill me-1"></i>
-                               Add to cart
-                           </button>
+                        <input  class="form-control text-center me-3" id="inputQuantity" type="num" v-model="count" style="max-width: 3rem" />
+                            <button class="text-center me-0" @click="arttır" > + </button>
+                            <button class=" text-center me-0" @click="azalt" > - </button>
+                            <button @click="addCart" class="btn btn-outline-dark flex-shrink-0 me-3" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
                        </div>
                    </div>
                </div>
@@ -36,18 +36,6 @@ export default {
            
        }
    },
-   setup() {
-    const count = ref(0)
-
-    // expose to template and other options API hooks
-    return {
-      count
-    }
-  },
-
-  mounted() {
-    console.log(this.count) // 0
-  },
    created() {
     
        this.$appAxios.get(`/product?id=${ this.$route.params.id}`)
@@ -57,4 +45,28 @@ export default {
        } )
    },
 }
+</script>
+<script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
+const addCount = ref(0)
+    const arttır = () => {
+        count.value ++
+    }
+    const azalt = () => {
+        count.value--
+        
+    }
+   
+    const addCart = () => {
+        addCount.value += count.value
+        console.log(addCount.value);
+        Swal.fire(
+  'Sepete Eklendi!',
+  'Sepete Ekleme İşlemi Başarılı!',
+  'success'
+)
+        console.log(count.value);
+    }
 </script>
