@@ -41,7 +41,7 @@
 
 <script>
 
-import Swal from 'sweetalert2'
+
 export default {
     
     data() {
@@ -62,11 +62,7 @@ export default {
     methods : {
         onSave() {
             console.log(this.productData)
-            Swal.fire(
-  'Ürün Eklendi!',
-  'Ürün Ekleme İşlemi Başarılı!',
-  'success'
-)
+            
 
            this.$appAxios.post("/product",this.productData)
             .then(save_response => {
