@@ -28,7 +28,8 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+
+import Swal from 'sweetalert2'
 export default {
    data() {
        return {
