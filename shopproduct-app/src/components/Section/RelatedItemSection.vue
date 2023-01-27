@@ -20,7 +20,7 @@
                            </div>
                            <!-- Product actions-->
                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                               <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                               <div class="text-center"><router-link class="btn btn-outline-dark mt-auto" :to="/product/+product.id">Ürün Detayı</router-link></div>
                            </div>
                        </div>
                    </div>
