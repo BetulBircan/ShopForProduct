@@ -1,4 +1,5 @@
 <template>
+    <NavBar :addCount = "addCount" />
     <section class="py-5">
            <div class="container px-4 px-lg-5 my-5" v-for="product in productList" :key="product">
                <div class="row gx-4 gx-lg-5 align-items-center">
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-
+import NavBar from '../Navigation/NavBar.vue';
 import Swal from 'sweetalert2'
 export default {
    data() {
@@ -45,6 +46,7 @@ export default {
            this.productList = res.data
        } )
    },
+   components: { NavBar }
 }
 </script>
 <script setup>
