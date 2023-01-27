@@ -67,11 +67,12 @@ export default {
   'Ürün Ekleme İşlemi Başarılı!',
   'success'
 )
-           this.$appAxios.post("/product",this.productData)
+
+           this.$appAxios.post("product",this.productData)
             .then(save_response => {
                 console.log("save_response", save_response);
                 this.resetData()
-                this.$router.push("/allproducts")
+                this.$router.push("allproducts")
             })
         },
         resetData() {
