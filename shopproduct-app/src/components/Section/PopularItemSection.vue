@@ -1,22 +1,22 @@
 
 <template>
-	<div>
-        
+    <div>
+
         <div class="card">
-            <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
+            <Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
                 <template #header>
-                    <h5>Ürünler</h5>
+                    <h5>Popüler Ürünler</h5>
                 </template>
                 <template #item="slotProps">
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img :src="slotProps.data.imageurl" :alt="slotProps.data.title" class="product-image"  />
+                                <img :src="slotProps.data.imageurl" :alt="slotProps.data.title" class="product-image" />
                             </div>
                             <div>
-                                <h4 class="mb-1">{{slotProps.data.title}}</h4>
-                                <h6 class="mt-0 mb-3">₺{{slotProps.data.price}}</h6>
-                                
+                                <h4 class="mb-1">{{ slotProps.data.title }}</h4>
+                                <h6 class="mt-0 mb-3">${{ slotProps.data.price }}</h6>
+
                                 <div class="car-buttons mt-5">
                                     <Button icon="pi pi-search" class="p-button p-button-rounded mr-2" />
                                     <Button icon="pi pi-star-fill" class="p-button-success p-button-rounded mr-2" />
@@ -25,14 +25,16 @@
                             </div>
                         </div>
                     </div>
-                    
                 </template>
-                
             </Carousel>
-            <Button @click="click" label="Tümünü Göster" class="p-button-raised p-button-secondary" />
         </div>
 
-	</div>
+
+
+
+
+
+    </div>
 </template>
 
 <script>
@@ -43,47 +45,42 @@ import Button from 'primevue/button';
 
 
 
-
 export default {
-	
-	data() {
-		return {
+
+    data() {
+        return {
             products: null,
-			responsiveOptions: [
-				{
-					breakpoint: '1024px',
-					numVisible: 3,
-					numScroll: 3
-				},
-				{
-					breakpoint: '600px',
-					numVisible: 2,
-					numScroll: 2
-				},
-				{
-					breakpoint: '480px',
-					numVisible: 1,
-					numScroll: 1
-				}
-			]
-		}
-	},
-    components : {
+            responsiveOptions: [
+                {
+                    breakpoint: '1024px',
+                    numVisible: 3,
+                    numScroll: 3
+                },
+                {
+                    breakpoint: '600px',
+                    numVisible: 2,
+                    numScroll: 2
+                },
+                {
+                    breakpoint: '480px',
+                    numVisible: 1,
+                    numScroll: 1
+                }
+            ]
+        }
+    },
+    components: {
         Carousel,
         Button
     },
 
-	mounted() {
+    mounted() {
         this.$appAxios.get(`/product?_limit=6`)
-        .then(res => this.products = res.data)
-    
+            .then(res =>{
+                this.products = res.data
+            })
+           
 
-	},
-    methods : {
-        click() {
-            this.$router.push("/allproducts")
-            console.log(this.products);
-        }
     }
 }
 
@@ -97,7 +94,7 @@ export default {
         margin: .3rem;
         text-align: center;
         padding: 2rem 0;
-        
+
     }
 
     .product-image {

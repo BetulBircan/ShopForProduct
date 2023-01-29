@@ -3,9 +3,7 @@
    <NavBar />
 
        <router-view></router-view>
-       <footer class="py-5 bg-dark">
-           <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-       </footer>
+       <FooterComponent />
  </div>
  
 
@@ -14,14 +12,14 @@
 
 <script>
 import NavBar from './components/Navigation/NavBar.vue';
+import FooterComponent from './components/PageContent/FooterComponent.vue';
 
 
 export default {
  name: 'App',
  components: {
-   NavBar,
-   
-  
+    NavBar,
+    FooterComponent
 }
 }
 </script>
