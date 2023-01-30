@@ -32,7 +32,7 @@
 							<Rating :modelValue="slotProps.data.rating.rate" :readonly="true" :cancel="false"></Rating>
 						</div>
 						<div class="product-grid-item-bottom">
-							<span class="product-price">${{slotProps.data.price}}</span>
+							<span class="product-price">₺{{slotProps.data.price}}</span>
 							<Button icon="pi pi-shopping-cart"></Button>
                             <router-link class="btn btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
                             <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>

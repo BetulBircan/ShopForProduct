@@ -15,7 +15,7 @@
                             </div>
                             <div>
                                 <h4 class="mb-1">{{ slotProps.data.title }}</h4>
-                                <h6 class="mt-0 mb-3">${{ slotProps.data.price }}</h6>
+                                <h6 class="mt-0 mb-3">₺{{ slotProps.data.price }}</h6>
 
                                 <div class="car-buttons mt-5">
                                     <Button icon="pi pi-search" class="p-button p-button-rounded mr-2" />

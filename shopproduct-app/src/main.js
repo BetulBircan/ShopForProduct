@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import { appAxios } from './utils/appAxios'
+import { store } from "@/store/store";
 import PrimeVue from 'primevue/config';
 
 //prime vue temalar
@@ -62,6 +63,7 @@ import 'primevue/resources/themes/rhea/theme.css'
 
 const app = createApp(App)
 app.use(router)
+app.use(store)
 app.use(PrimeVue);
 app.config.globalProperties.$axios = axios
 app.config.globalProperties.$appAxios = appAxios
