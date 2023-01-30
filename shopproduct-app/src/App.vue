@@ -1,7 +1,6 @@
 <template>
   <div class="container p-3">
    <NavBar />
-
        <router-view></router-view>
        <FooterComponent />
  </div>

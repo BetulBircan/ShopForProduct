@@ -1,5 +1,4 @@
 <template>
-    <h3>Anasayfa</h3>
     <CarouselComponent />
     <RelatedItemSection />
     <PopularItemSection />
