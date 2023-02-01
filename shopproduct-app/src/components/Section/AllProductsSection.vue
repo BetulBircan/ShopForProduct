@@ -50,6 +50,7 @@ import Dropdown from 'primevue/dropdown';
 //import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions'
 import DataView from 'primevue/dataview';
 import Button from 'primevue/button';
+import Rating from "primevue/rating";
 
 
 
@@ -58,7 +59,8 @@ export default {
         Dropdown,
         //DataViewLayoutOptions,
         DataView,
-        Button
+        Button,
+		Rating
     },
     data() {
         return {
@@ -184,6 +186,8 @@ export default {
 	img {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 		margin: 2rem 0;
+		width: 50%;
+		height: 50%;
 	}
 
 	.product-grid-item-content {
