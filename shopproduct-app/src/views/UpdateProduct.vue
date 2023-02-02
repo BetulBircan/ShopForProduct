@@ -41,7 +41,7 @@
 
 <script>
 
-
+import Swal from 'sweetalert2'
 export default {
     
     data() {
@@ -55,15 +55,19 @@ export default {
                 rating : {
                     rate : null,
                     count: null
-                }
+                },
+                quantity : 1
             }
         }
     },
     methods : {
         onUpdate() {
             console.log(this.productData)
-            
-
+            Swal.fire(
+  'Ürün Güncellendi!',
+  'Güncelleme İşlemi Başarılı!',
+  'success'
+)
 
            this.$appAxios.put(`/product/${this.$route.params.id}`, this.productData)
             .then(save_response => {

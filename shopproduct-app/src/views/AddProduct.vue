@@ -55,7 +55,8 @@ export default {
                 rating : {
                     rate : null,
                     count: null
-                }
+                },
+                quantity : 1
             }
         }
     },
