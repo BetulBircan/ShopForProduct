@@ -12,13 +12,31 @@ export const store = createStore({
     addBasket (state,data) {
 
       state.basket.push({...data})
+
+      console.log(data);
+      console.log(data.title);
+
     },
-    // updateItem (state,data) {
-
-
-    //   //güncellemeyapılacak
-    // }
-  }
+    increaseQuantity (state, data) {
+      state.basket.map(cart => {
+        if(cart.id === data.id  ) {
+           cart.quantity++
+         
+        }
+      })
+    //güncellemeyapılacak
+    },
+    decreaseQuantity (state, data) {
+      state.basket.map(cart => {
+        if(cart.id === data.id  ) {
+          cart.quantity--
+        }
+      })
+    //güncellemeyapılacak
+    }
+    
+  
+  } 
 ,
 actions: {
   addBasket (context) {
@@ -27,9 +45,12 @@ actions: {
   },
 
 
-  updateItem (context) {
+  increaseQuantity (context) {
   //Güncelleme yapılacak
-    context.commit('updateItem')
+    context.commit('increaseQuantity')
+  },
+  decreaseQuantity (context) {
+    context.commit('decreaseQuantity')
   }
 }
 
