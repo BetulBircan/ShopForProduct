@@ -1,25 +1,22 @@
 <template>
-
     <CarouselComponent />
-    <RelatedItemsSection />
-    <PopularProductsSection />
-    
+    <RelatedItemSection />
+    <PopularItemSection />
+
 
 </template>
 
 <script>
 
 import CarouselComponent from '@/components/PageContent/CarouselComponent.vue';
-import PopularProductsSection from '@/components/Section/PopularProductsSection.vue';
-import RelatedItemsSection from '../components/Section/RelatedItemsSection'
-
+import RelatedItemSection from '../components/Section/RelatedItemSection.vue'
+import PopularItemSection from '@/components/Section/PopularItemSection.vue'
 
 export default {
     components : {
-    RelatedItemsSection,
+    RelatedItemSection,
     CarouselComponent,
-    PopularProductsSection
-
+    PopularItemSection
 }
 }
 </script>
