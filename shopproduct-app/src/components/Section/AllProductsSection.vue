@@ -30,10 +30,11 @@
 							<div class="product-name">{{slotProps.data.title}}</div>
 							<div class="product-description">{{slotProps.data.description}}</div>
 							<Rating :modelValue="slotProps.data.rating.rate" :readonly="true" :cancel="false"></Rating>
+							
 						</div>
 						<div class="product-grid-item-bottom">
 							<span class="product-price">₺{{slotProps.data.price}}</span>
-							<Button icon="pi pi-shopping-cart"></Button>
+							<Button @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"></Button>
                             <router-link class="btn btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
                             <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
 						</div>
@@ -50,7 +51,8 @@ import Dropdown from 'primevue/dropdown';
 //import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions'
 import DataView from 'primevue/dataview';
 import Button from 'primevue/button';
-import Rating from "primevue/rating";
+import Rating from 'primevue/rating';
+import { mapMutations } from "vuex";
 
 
 
@@ -80,9 +82,6 @@ export default {
         this.$appAxios.get(`/product`)
         .then(res => this.products = res.data)
     },
-    mounted() {
-        
-    },
     methods: {
         onSortChange(event){
             const value = event.value.value;
@@ -98,7 +97,10 @@ export default {
                 this.sortField = value;
                 this.sortKey = sortValue;
             }
-        }
+        },
+		...mapMutations({
+           addCart: 'addBasket' 
+   })
     }
 }
 </script>
@@ -186,8 +188,9 @@ export default {
 	img {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 		margin: 2rem 0;
-		width: 50%;
-		height: 50%;
+		width:600px;
+		height: 600px;
+
 	}
 
 	.product-grid-item-content {

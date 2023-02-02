@@ -35,6 +35,11 @@ const routes = [
         name : "UpdateProduct",
         path : "/updateproduct/:id",
         component : () => import("./views/UpdateProduct")
+    },
+    {
+        name : "ProductCart",
+        path : "/productcart",
+        component : () => import("./views/ProductCart")
     }
 ]
 
