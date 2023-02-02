@@ -6,7 +6,7 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Ürün Fiyatı</label>
-            <input type="float" v-model="productData.price" class="form-control" id="price" placeholder="Fiyat">
+            <input type="number" v-model="productData.price" class="form-control" id="price" placeholder="Fiyat">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Ürün Açıklaması</label>
@@ -41,7 +41,7 @@
 
 <script>
 
-
+import Swal from 'sweetalert2'
 export default {
     
     data() {
@@ -62,7 +62,11 @@ export default {
     methods : {
         onSave() {
             console.log(this.productData)
-            
+            Swal.fire(
+  'Ürün Eklendi!',
+  'Ürün Ekleme İşlemi Başarılı!',
+  'success'
+)
 
            this.$appAxios.post("/product",this.productData)
             .then(save_response => {
