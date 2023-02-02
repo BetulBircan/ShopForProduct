@@ -14,9 +14,6 @@
                        <p class="lead"><b>Rate</b> : {{ product.rating.rate }}</p>
                        <p class="lead"><b>Count</b> : {{ product.rating.count }}</p>
                        <div class="d-flex">
-                           <input  class="form-control text-center me-3" id="inputQuantity" type="num" v-model="count" style="max-width: 3rem" />
-                           <button class="text-center me-0" @click="arttır" > + </button>
-                           <button class=" text-center me-0" @click="azalt" > - </button>
                            <button @click="addCart(product)" class="btn btn-outline-dark flex-shrink-0 me-3" type="button">
                                <i class="bi-cart-fill me-1"></i>
                                Add to cart
@@ -62,20 +59,3 @@ export default {
 }
 </script>
 
-<script setup>
-import { ref } from 'vue'
-
-
-const count = ref(0)
-
-   const arttır = () => {
-       count.value ++
-   }
-   const azalt = () => {
-       count.value--
-       
-   }
-  
-
-
-</script>

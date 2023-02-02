@@ -30,9 +30,18 @@
                         style="max-width: 3rem" />
                     <button @click="increase(slotProps.data)" class="text-center me-1" > + </button>
                     <button @click="decrease(slotProps.data)" class=" text-center me-1"> - </button>
-                </template></Column>
+                </template>
+            </Column>
+            <Column header="Sil">
+                <template #body>
+                    <Button icon="pi pi-trash"></Button>
+                </template>
+            </Column>
             <template #footer>
-                In total there are {{ products? products.length : 0 }} products.
+                Toplam {{ products? products.length : 0 }} ürün bulunmaktadır.
+                <br>
+                <br>
+                <button>Alışverişe Devam Et</button>
             </template>
         </DataTable>
     </div>

@@ -3,9 +3,9 @@
 	<div>
         
         <div class="card">
-            <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
+            <Carousel :value="populars" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
                 <template #header>
-                    <h5>Ürünler</h5>
+                    <h5>Popüler Ürünler</h5>
                 </template>
                 <template #item="slotProps">
                     <div class="product-item">
@@ -29,7 +29,7 @@
                 </template>
                 
             </Carousel>
-            <Button @click="click" label="Tümünü Göster" />
+            <Button @click="click" label="Tümünü Göster" class="p-button-raised p-button-secondary" />
         </div>
 
 	</div>
@@ -48,7 +48,8 @@ export default {
 	
 	data() {
 		return {
-            products: null,
+            products: [],
+            populars : [],
 			responsiveOptions: [
 				{
 					breakpoint: '1024px',
@@ -74,14 +75,18 @@ export default {
     },
 
 	mounted() {
-        this.$appAxios.get(`/product?_limit=6`)
-        .then(res => this.products = res.data)
+        this.$appAxios.get(`/product`)
+        .then(res =>{
+             this.products = res.data
+             this.populars = this.products.filter(p=> p.rating.rate >=4)
+            })
+       
     
 
 	},
     methods : {
         click() {
-            this.$router.push("/allproducts")
+            this.$router.push("/popular")
             console.log(this.products);
         }
     }

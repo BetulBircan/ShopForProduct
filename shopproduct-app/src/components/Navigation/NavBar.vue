@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-           <div class="container px-4 px-lg-5">
+           <div id="sepet" class="container px-4 px-lg-5">
                <router-link class="navbar-brand" active-class="active" to="/">Shop Products</router-link>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -8,7 +8,7 @@
                        <li class="nav-item"><router-link class="nav-link" active-class="active" aria-current="page" to="/">Anasayfa</router-link></li>
                        <li class="nav-item"><router-link class="nav-link" active-class="active" to="/about">Hakkımızda</router-link></li>
                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ürünler</a>
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                <li><router-link class="dropdown-item" active-class="active" to="/allproducts">Tüm Ürünler</router-link></li>
                                <li><hr class="dropdown-divider" /></li>
@@ -16,9 +16,18 @@
                                
                            </ul>
                        </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ürün İşlemleri</a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                               <li><router-link class="dropdown-item" active-class="active" to="/addproduct">Ürün Ekleme</router-link></li>
+                               <!-- <li><hr class="dropdown-divider" /></li>
+                               <li><router-link class="dropdown-item" to="/popular">Popular Ürünler</router-link></li> -->
+                               
+                           </ul>
+                       </li>
                    </ul>
                    <form class="d-flex">
-                       <button @click="$router.push({ name : 'ProductCart' })" id="sepet" class="btn btn-outline-dark" type="submit">
+                       <button @click="$router.push({ name : 'ProductCart' })" class="btn btn-outline-dark" type="submit">
                            <i class="bi-cart-fill me-1"></i>
                            Cart
                            <span class="badge bg-dark text-white ms-1 rounded-pill">{{ store.state.basket.length }}
@@ -28,7 +37,7 @@
                </div>
            </div>
        </nav>
-    {{ count }}
+   
 </template>
 
 
