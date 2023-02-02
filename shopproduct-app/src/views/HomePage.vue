@@ -1,7 +1,7 @@
 <template>
     <CarouselComponent />
     <RelatedItemSection />
-    <PopularItemSection />
+    <PopularProductsSection />
 
 
 </template>
@@ -10,13 +10,13 @@
 
 import CarouselComponent from '@/components/PageContent/CarouselComponent.vue';
 import RelatedItemSection from '../components/Section/RelatedItemSection.vue'
-import PopularItemSection from '@/components/Section/PopularItemSection.vue'
+import PopularProductsSection from '@/components/Section/PopularProductsSection.vue'
 
 export default {
     components : {
     RelatedItemSection,
     CarouselComponent,
-    PopularItemSection
+    PopularProductsSection
 }
 }
 </script>
