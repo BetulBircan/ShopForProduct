@@ -28,7 +28,9 @@
 						</div>
 						<div class="product-grid-item-bottom">
 							<span class="product-price">₺{{slotProps.data.price}}</span>
-							<Button icon="pi pi-shopping-cart" ></Button>
+							<Button @click="addCart(slotProps.data)" icon="pi pi-shopping-cart" label="Sepete Ekle"></Button>
+                            <router-link class="btn btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
+                            <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
 						</div>
 					</div>
 				</div>
@@ -43,6 +45,7 @@ import Dropdown from 'primevue/dropdown';
 import DataView from 'primevue/dataview';
 import Button from 'primevue/button';
 import Rating from 'primevue/rating';
+import { mapMutations } from "vuex";
 
 
 export default {
@@ -93,7 +96,10 @@ export default {
                 this.sortField = value;
                 this.sortKey = sortValue;
             }
-        }
+        },
+		...mapMutations({
+           addCart: 'addBasket' 
+   })
     }
 }
 </script>
