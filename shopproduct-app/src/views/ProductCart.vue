@@ -41,7 +41,7 @@
                 Toplam {{ products? products.length : 0 }} ürün bulunmaktadır.
                 <br>
                 <br>
-                <Button label="Alışverişe Devam Et" />
+                <Button @click="$router.push('/allproducts')" label="Alışverişe Devam Et" />
             </template>
         </DataTable>
     </div>
