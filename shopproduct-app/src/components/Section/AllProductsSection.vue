@@ -112,6 +112,7 @@ export default {
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     border-radius: 4px;
     margin-bottom: 2rem;
+	max-width: 100%;
 }
 .p-dropdown {
     width: 14rem;
@@ -168,35 +169,5 @@ export default {
 	}
 }
 
-@media screen and (max-width: 576px) {
-	.product-list-item {
-		flex-direction: column;
-		align-items: center;
 
-		img {
-			margin: 2rem 0;
-		}
-
-		.product-list-detail {
-			text-align: center;
-		}
-
-		.product-price {
-			align-self: center;
-		}
-
-		.product-list-action {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.product-list-action {
-			margin-top: 2rem;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			width: 100%;
-		}
-	}
-}
 </style>
