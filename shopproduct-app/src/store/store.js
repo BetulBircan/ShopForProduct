@@ -17,9 +17,10 @@ export const store = createStore({
       console.log(data.title);
 
     },
-    deleteBasket (state,data) {
+    deleteBasket (state) {
 
       state.basket.pop()
+      
 
     },
     increaseQuantity (state, data) {
