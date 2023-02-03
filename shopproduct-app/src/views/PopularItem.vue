@@ -1,9 +1,3 @@
-
-import PopularItemSection from '@/components/Section/PopularItemSection.vue';
-
-
-import PopularItemSection from '@/components/Section/PopularItemSection.vue';
-
 <template>
     <PopularItemSection />
 </template>

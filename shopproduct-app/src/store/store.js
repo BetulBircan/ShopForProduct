@@ -17,10 +17,16 @@ export const store = createStore({
       console.log(data.title);
 
     },
+    deleteBasket (state,data) {
+
+      state.basket.pop()
+
+    },
     increaseQuantity (state, data) {
       state.basket.map(cart => {
         if(cart.id === data.id  ) {
            cart.quantity++
+           cart.price *= cart.quantity
          
         }
       })

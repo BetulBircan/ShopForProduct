@@ -34,14 +34,14 @@
             </Column>
             <Column header="Sil">
                 <template #body>
-                    <Button icon="pi pi-trash"></Button>
+                    <Button label="Sil" @click="deleteCart(products)" icon="pi pi-trash"></Button>
                 </template>
             </Column>
             <template #footer>
                 Toplam {{ products? products.length : 0 }} ürün bulunmaktadır.
                 <br>
                 <br>
-                <button>Alışverişe Devam Et</button>
+                <Button label="Alışverişe Devam Et" />
             </template>
         </DataTable>
     </div>
@@ -99,7 +99,8 @@ export default {
         ...mapMutations({
             addCart: 'addBasket' ,
             increase : 'increaseQuantity',
-            decrease : 'decreaseQuantity'
+            decrease : 'decreaseQuantity',
+            deleteCart : 'deleteBasket'
 
     }),
     
