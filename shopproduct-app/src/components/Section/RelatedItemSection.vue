@@ -5,7 +5,7 @@
         <div class="card">
             <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" class="custom-carousel" :circular="true" :autoplayInterval="3000">
                 <template #header>
-                    <h5>Ürünler</h5>
+                    <h5 class="d-flex align-items-center justify-content-center py-3">Ürünler</h5>
                 </template>
                 <template #item="slotProps">
                     <div class="product-item">
