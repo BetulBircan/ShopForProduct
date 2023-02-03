@@ -74,8 +74,8 @@ export default {
     },
 
 	mounted() {
-        this.$appAxios.get(`/product?_limit=6`)
-        .then(res => this.products = res.data)
+        this.$appAxios.get(`/product`)
+        .then(res => this.products = res.data.slice(0,9))
     
 
 	},

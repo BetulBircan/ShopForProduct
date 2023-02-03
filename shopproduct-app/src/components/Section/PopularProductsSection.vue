@@ -77,7 +77,7 @@ export default {
 	mounted() {
         this.$appAxios.get(`/product`)
         .then(res =>{
-             this.products = res.data
+             this.products = res.data.slice(0,9)
              this.populars = this.products.filter(p=> p.rating.rate >=4)
             })
        
