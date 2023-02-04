@@ -41,7 +41,7 @@ import { useStore } from "vuex";
 import Button from 'primevue/button';
 
 export default {
-   componets : {
+   components : {
     Button
    },
    setup() {
