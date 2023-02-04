@@ -27,12 +27,7 @@
                        </li>
                    </ul>
                    <form class="d-flex">
-                       <button @click="$router.push({ name : 'ProductCart' })" class="btn btn-outline-dark" type="submit">
-                           <i class="bi-cart-fill me-1"></i>
-                           Cart
-                           <span class="badge bg-dark text-white ms-1 rounded-pill">{{ store.state.basket.length }}
-                           </span>
-                       </button>
+                    <Button type="button" @click="$router.push({ name : 'ProductCart' })" icon="pi pi-shopping-cart" class="p-button-sm" :badge="store.state.basket.length" label="Sepetim : "></Button>
                    </form>
                </div>
            </div>
@@ -43,9 +38,12 @@
 
 <script>
 import { useStore } from "vuex";
+import Button from 'primevue/button';
 
 export default {
-   
+   componets : {
+    Button
+   },
    setup() {
    const store = useStore();
          return  {store}
