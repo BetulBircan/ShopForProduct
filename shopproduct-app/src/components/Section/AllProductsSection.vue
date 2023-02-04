@@ -16,7 +16,7 @@
 			
 
 			<template #grid="slotProps">
-				<div class="col-12 md:col-4">
+				<div class="col-12 sm:col-4">
 					<div class="product-grid-item card">
 						<div class="product-grid-item-top">
 							<div>
