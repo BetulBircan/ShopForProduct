@@ -29,7 +29,7 @@
                 </template>
                 
             </Carousel>
-            <Button @click="click" label="Tümünü Göster" class="p-button-raised p-button-secondary" />
+            <Button @click="click" label="Tümünü Göster" class="p-button-sm p-button-raised p-button-secondary" />
         </div>
 
 	</div>

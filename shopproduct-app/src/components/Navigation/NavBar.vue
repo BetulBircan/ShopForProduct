@@ -27,7 +27,7 @@
                        </li>
                    </ul>
                    <form class="d-flex">
-                    <Button type="button" @click="$router.push({ name : 'ProductCart' })" icon="pi pi-shopping-cart" class="p-button-sm" :badge="store.state.basket.length" label="Sepetim : "></Button>
+                    <Button type="button" @click="$router.push({ name : 'ProductCart' })" icon="pi pi-shopping-cart" class="p-button-sm" :badge="store.state.basket.length" label="Sepetim "></Button>
                    </form>
                </div>
            </div>

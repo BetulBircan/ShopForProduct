@@ -34,9 +34,9 @@
 						</div>
 						<div class="product-grid-item-bottom">
 							<span class="product-price">₺{{slotProps.data.price}}</span>
-							<Button label="Sepete Ekle" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"></Button>
-                            <router-link class="btn btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
-                            <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
+							<Button class="p-button-sm" label="Sepete Ekle" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"></Button>
+                            <router-link class="btn btn-sm btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
+                            <router-link class="btn btn-sm btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
 						</div>
 					</div>
 				</div>
