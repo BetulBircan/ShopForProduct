@@ -28,9 +28,9 @@
 						</div>
 						<div class="product-grid-item-bottom">
 							<span class="product-price">₺{{slotProps.data.price}}</span>
-							<Button @click="addCart(slotProps.data)" icon="pi pi-shopping-cart" label="Sepete Ekle"></Button>
-                            <router-link class="btn btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
-                            <router-link class="btn btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
+							<Button class="p-button-sm" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart" label="Sepete Ekle"></Button>
+                            <router-link class="btn btn-sm btn-outline-dark mt-auto" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
+                            <router-link class="btn btn-sm btn-outline-dark mt-auto " :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
 						</div>
 					</div>
 				</div>
@@ -111,6 +111,7 @@ export default {
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     border-radius: 4px;
     margin-bottom: 2rem;
+    max-width: 100%;
 }
 .p-dropdown {
     width: 14rem;
@@ -150,6 +151,8 @@ export default {
 	img {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 		margin: 2rem 0;
+        max-width:120px;
+		max-height: 80px;
 	}
 
 	.product-grid-item-content {
@@ -162,37 +165,6 @@ export default {
 	}
 }
 
-@media screen and (max-width: 576px) {
-	.product-list-item {
-		flex-direction: column;
-		align-items: center;
-
-		img {
-			margin: 2rem 0;
-		}
-
-		.product-list-detail {
-			text-align: center;
-		}
-
-		.product-price {
-			align-self: center;
-		}
-
-		.product-list-action {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.product-list-action {
-			margin-top: 2rem;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			width: 100%;
-		}
-	}
-}
 </style>
 
 

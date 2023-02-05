@@ -154,8 +154,8 @@ export default {
 	img {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 		margin: 2rem 0;
-		max-width:50%;
-		// maxheight: 400px;
+		max-width:120px;
+		max-height: 80px;
 
 	}
 

@@ -16,6 +16,7 @@
                             <div>
                                 <h4 class="mb-1">{{slotProps.data.title}}</h4>
                                 <h6 class="mt-0 mb-3">₺{{slotProps.data.price}}</h6>
+                                <Rating class="mt-0 mb-3 sm:flex justify-content-center " :modelValue="slotProps.data.rating.rate" :readonly="true" :cancel="false"></Rating>
                                 
                                 <div class="car-buttons mt-5">
                                     <Button icon="pi pi-search" class="p-button p-button-rounded mr-2" />
@@ -39,6 +40,7 @@
 
 import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
+import Rating from 'primevue/rating';
 
 
 
@@ -70,7 +72,8 @@ export default {
 	},
     components : {
         Carousel,
-        Button
+        Button,
+        Rating
     },
 
 	mounted() {
