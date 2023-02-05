@@ -28,7 +28,6 @@ export const store = createStore({
         if(cart.id === data.id  ) {
            cart.quantity++
            cart.price *= cart.quantity
-         
         }
       })
     //güncellemeyapılacak

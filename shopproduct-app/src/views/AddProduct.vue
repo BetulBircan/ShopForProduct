@@ -80,7 +80,7 @@ export default {
                 .then(save_response => {
                     console.log("save_response", save_response);
                     this.resetData()
-                    this.$router.push("/allproducts")
+                    this.$router.push('/allproducts')
                 })
         },
         resetData() {

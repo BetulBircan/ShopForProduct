@@ -29,7 +29,7 @@
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" v-model="slotProps.data.quantity"
                         style="max-width: 3rem" />
                     <button @click="increase(slotProps.data)" class="text-center me-1" > + </button>
-                    <button @click="decrease(slotProps.data)" class=" text-center me-1"> - </button>
+                    <button :disabled="slotProps.data.quantity === 1" @click="decrease(slotProps.data)" class=" text-center me-1"> - </button>
                 </template>
             </Column>
             <Column header="Sil">
