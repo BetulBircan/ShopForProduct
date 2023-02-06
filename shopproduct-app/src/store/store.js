@@ -13,8 +13,8 @@ export const store = createStore({
 
       state.basket.push({...data})
 
-      console.log(data);
-      console.log(data.title);
+      // console.log(data);
+      // console.log(data.title);
 
     },
     deleteBasket (state) {
@@ -36,6 +36,7 @@ export const store = createStore({
       state.basket.map(cart => {
         if(cart.id === data.id  ) {
           cart.quantity--
+          cart.price *= cart.quantity
         }
       })
     //güncellemeyapılacak
