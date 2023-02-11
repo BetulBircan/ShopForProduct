@@ -161,6 +161,8 @@ export default {
 
 	.product-grid-item-content {
 		text-align: center;
+        width : 353px;
+        height: 445px;
 	}
 
 	.product-price {

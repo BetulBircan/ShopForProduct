@@ -18,11 +18,6 @@
                                 <h6 class="mt-0 mb-3">₺{{slotProps.data.price}}</h6>
                                 <Rating class="mt-0 mb-3 sm:flex justify-content-center " :modelValue="slotProps.data.rating.rate" :readonly="true" :cancel="false"></Rating>
                                 
-                                <div class="car-buttons mt-5">
-                                    <Button icon="pi pi-search" class="p-button p-button-rounded mr-2" />
-                                    <Button icon="pi pi-star-fill" class="p-button-success p-button-rounded mr-2" />
-                                    <Button icon="pi pi-cog" class="p-button-help p-button-rounded" />
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -30,7 +25,7 @@
                 </template>
                 
             </Carousel>
-            <Button @click="click" label="Tümünü Göster" class="p-button-sm p-button-raised p-button-secondary" />
+            <Button class="p-button-text" @click="click" label="Tümünü Göster" />
         </div>
 
 	</div>
@@ -101,14 +96,14 @@ export default {
         margin: .3rem;
         text-align: center;
         padding: 2rem 0;
-        max-width: 511px;
-        height: 750px;
+        max-width: 336px;
+        height: 329px;
         
     }
 
     .product-image {
-        max-width: 400px;
-        height: 400px;
+        max-width: 164px;
+        height: 109px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
     }
 }
