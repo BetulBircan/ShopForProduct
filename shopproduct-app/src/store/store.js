@@ -24,25 +24,44 @@ export const store = createStore({
 
     },
     increaseQuantity (state, data) {
-      state.basket.map(cart => {
-        if(cart.id === data.id  ) {
-           cart.quantity++
-           cart.price *= cart.quantity
-        }
-      })
+      let item = state.basket.find(p => p.id === data.id)
+      if(item) {
+        item.quantity++
+        console.log(item.quantity);
+        item.price *= item.quantity
+        console.log(item.price);
+      }
+      // state.basket.map(cart => {
+      //   if(cart.id === data.iSd  ) {
+      //      cart.quantity++
+      //      console.log(cart.quantity);
+      //      cart.price *= cart.quantity
+      //      console.log(cart.price);
+      //   }
+      // })
     //güncellemeyapılacak
     },
     decreaseQuantity (state, data) {
-      state.basket.map(cart => {
-        if(cart.id === data.id  ) {
-          cart.price /= cart.quantity
-          cart.quantity--
-          cart.price *cart.quantity
-        }
-      })
+      let cart = state.basket.find(p => p.id === data.id)
+      if(cart) {
+        cart.price = cart.price/cart.quantity
+        cart.quantity--
+        console.log(cart.quantity);
+         cart.price* cart.quantity
+        console.log(cart.price);
+      }
+      // state.basket.map(card => { 
+      //   if(card.id === data.id  ) {
+      //     card.quantity--    
+      //       console.log(card.quantity);
+          
+      //       console.log(card.price );
+          
+          
+      //   }
+      // })
     //güncellemeyapılacak
     }
-    
   
   } 
 ,
