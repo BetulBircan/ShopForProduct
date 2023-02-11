@@ -35,8 +35,9 @@ export const store = createStore({
     decreaseQuantity (state, data) {
       state.basket.map(cart => {
         if(cart.id === data.id  ) {
+          cart.price /= cart.quantity
           cart.quantity--
-          cart.price *= cart.quantity
+          cart.price *cart.quantity
         }
       })
     //güncellemeyapılacak
