@@ -34,3 +34,10 @@
   </button>
 </div>
 </template>
+
+<style scoped>
+img {
+  width: 1288px;
+  height: 357px;
+}
+</style>

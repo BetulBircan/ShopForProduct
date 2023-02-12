@@ -33,17 +33,20 @@
         </div>
        
        <div class="d-flex justify-content-end align-items-center">
-            <button class="btn btn-sm btn-secondary me-1" @click="$router.push({ name : 'HomePage' })">İptal</button>
-            <button class="btn btn-sm btn-primary" @click="onUpdate">Güncelle</button>
-        </div> 
+            <Button label="İptal" icon="pi pi-times" class="p-button-sm p-button-secondary me-1" @click="$router.push({ name : 'HomePage' })" />
+            <Button label="Güncelle" icon="pi pi-undo" class="p-button-sm" @click="onUpdate" />
+        </div>
     </div>
 </template>
 
 <script>
 
 import Swal from 'sweetalert2'
+import Button from 'primevue/button'
 export default {
-    
+    components : {
+        Button
+    },
     data() {
         return {
             productData : {
