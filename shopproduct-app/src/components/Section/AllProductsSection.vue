@@ -71,7 +71,7 @@ export default {
     },
     data() {
         return {
-            products: null,
+            products: [],
             layout: 'grid',
             sortKey: null,
             sortOrder: null,
@@ -168,7 +168,7 @@ export default {
     .product-grid-item-content {
         text-align: center;
         max-width : 353px;
-        max-height: 403px;
+        height: 403px;
         margin: 7px;
         padding: 28px;
     }
