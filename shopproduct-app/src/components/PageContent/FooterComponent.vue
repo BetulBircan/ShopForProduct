@@ -6,9 +6,8 @@
 
 <style scoped>
 footer {
-    position: fixed;
+    position: sticky;
     left: 0px;
-    right : 5px;
     bottom: 0;
     width: 100%;
 }
