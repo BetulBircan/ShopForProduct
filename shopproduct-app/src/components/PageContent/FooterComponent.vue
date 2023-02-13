@@ -7,7 +7,8 @@
 <style scoped>
 footer {
     position: fixed;
-    left: 0;
+    left: 0px;
+    right : 5px;
     bottom: 0;
     width: 100%;
 }
