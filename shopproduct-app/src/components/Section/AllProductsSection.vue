@@ -35,7 +35,7 @@
                         </div>
                         <div class="product-grid-item-bottom">
                             <span class="product-price">₺{{ slotProps.data.price }}</span>
-                            <Button label="Ekle" class="p-button-sm" @click="addCart(slotProps.data)"
+                            <Button label="Sepete Ekle" class="p-button-sm" @click="addCart(slotProps.data)"
                                 icon="pi pi-shopping-cart"></Button>
                             <Button class="p-button-sm"><router-link class="no-underline text-white font-semibold"
                                     :to="/product/ + slotProps.data.id">Ürün Detayı</router-link></Button>
