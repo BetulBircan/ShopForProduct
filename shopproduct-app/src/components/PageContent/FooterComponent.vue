@@ -5,10 +5,13 @@
 </template>
 
 <style scoped>
-footer {
+
+    footer {
     position: sticky;
     left: 0px;
+    right: 5px;
     bottom: 0;
     width: 100%;
+
 }
 </style>
