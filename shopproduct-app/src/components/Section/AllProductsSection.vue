@@ -112,7 +112,7 @@ export default {
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     border-radius: 4px;
     margin-bottom: 2rem;
-    width: 50%
+    max-width: 100%
    
    
 }
@@ -164,10 +164,9 @@ export default {
 
 	.product-grid-item-content {
 		text-align: center;
-        width : 353px;
-        height: 403px;
-        margin: 7px;
-        padding: 28px;
+        max-width : 353px;
+        max-height: 403px;
+        
 	}
 
 	.product-price {
