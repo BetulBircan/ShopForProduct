@@ -30,12 +30,12 @@
                         </div>
                         <div class="product-grid-item-bottom">
                             <span class="product-price">₺{{ slotProps.data.price }}</span>
-                            <Button class="p-button-sm" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"
-                                label="Sepete Ekle"></Button>
-                            <router-link class="btn btn-sm btn-outline-dark mt-auto"
-                                :to="/product/ + slotProps.data.id">Ürün Detayı</router-link>
-                            <router-link class="btn btn-sm btn-outline-dark mt-auto "
-                                :to="/updateproduct/ + slotProps.data.id">Ürün Güncelle</router-link>
+                            <Button class="p-button-sm mt-auto" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"
+                                label="Ekle"></Button>
+                            <Button class="p-button-sm mt-auto"><router-link class="no-underline text-white font-semibold"
+                                :to="/product/ + slotProps.data.id">Ürün Detayı</router-link></Button>
+                            <Button class="p-button-sm mt-auto"><router-link class="no-underline text-white font-semibold "
+                                :to="/updateproduct/ + slotProps.data.id">Ürün Güncelle</router-link></Button>
                         </div>
                     </div>
                 </div>

@@ -23,12 +23,7 @@ app.use(PrimeVue)
 app.config.globalProperties.$axios = axios
 app.config.globalProperties.$appAxios = appAxios
 
-// app.component('DataTable', DataTable)
-// app.component('CoLumn', Column)
-// app.component('ColumnGroup', ColumnGroup)
-// app.component('RoW', Row)
-// app.component('ButTon', Button)
-// app.component('RatinG',Rating)
+
 
 app.mount('#app')
 
