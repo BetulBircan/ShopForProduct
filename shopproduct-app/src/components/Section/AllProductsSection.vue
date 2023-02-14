@@ -34,9 +34,9 @@
 						</div>
 						<div class="product-grid-item-bottom">
 							<span class="product-price">₺{{slotProps.data.price}}</span>
-							<Button class="p-button-sm" label="Sepete Ekle" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"></Button>
-                            <router-link class="btn btn-sm btn-outline-dark" :to="/product/+slotProps.data.id">Ürün Detayı</router-link>
-                            <router-link class="btn btn-sm btn-outline-dark" :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link>
+							<Button type="button" class="p-button-sm" @click="addCart(slotProps.data)" icon="pi pi-shopping-cart"></Button>
+                            <Button  class="p-button-sm"><router-link class="no-underline text-white font-semibold" :to="/product/+slotProps.data.id">Ürün Detayı</router-link></Button>
+                            <Button class="p-button-sm"><router-link class="no-underline text-white font-semibold" :to="/updateproduct/+slotProps.data.id">Ürün Güncelle</router-link></Button>
 						</div>
 					</div>
 				</div>
@@ -112,7 +112,7 @@ export default {
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     border-radius: 4px;
     margin-bottom: 2rem;
-    max-width: 100%
+    width: 100%
    
    
 }
@@ -164,9 +164,10 @@ export default {
 
 	.product-grid-item-content {
 		text-align: center;
-        max-width : 353px;
-        max-height: 403px;
-        
+        width : 353px;
+        height: 403px;
+        margin: 7px;
+        padding: 28px;
 	}
 
 	.product-price {
