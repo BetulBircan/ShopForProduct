@@ -11,7 +11,8 @@
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img :src="slotProps.data.imageurl" :alt="slotProps.data.title" class="product-image"  />
+                                <router-link :to="/product/+slotProps.data.id"><img :src="slotProps.data.imageurl" :alt="slotProps.data.title" class="product-image"  /></router-link>
+                                
                             </div>
                             <div>
                                 <h4 class="mb-1">{{slotProps.data.title}}</h4>
