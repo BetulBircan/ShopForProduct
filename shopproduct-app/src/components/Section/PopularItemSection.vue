@@ -164,7 +164,7 @@ export default {
     .product-grid-item-content {
         text-align: center;
         width : 353px;
-        height: 403px;
+        height: 413px;
         margin: 7px;
         padding: 28px;
     }
