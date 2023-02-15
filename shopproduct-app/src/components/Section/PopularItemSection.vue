@@ -1,7 +1,7 @@
 
 <template>
     <div class="card">
-        <DataView :value="populars" :layout="layout" :paginator="true" :rows="5" :sortOrder="sortOrder"
+        <DataView :value="populars" :layout="layout" :paginator="true" :rows="9" :sortOrder="sortOrder"
             :sortField="sortField">
             <template #header>
                 <div class="grid grid-nogutter">
