@@ -54,4 +54,21 @@ Detayları [ShopForProduct/shopproduct-app/src/views/HomePage.vue](https://githu
 
 ![2023-02-16 (7)](https://user-images.githubusercontent.com/86554799/219204950-0cb99cef-153e-46b8-adc4-2d802a094baf.png)
 
+- Daha sonra bu componenti **views** klasörü içerisindeki **PopularItem.vue** dosyasına dahil ettim.Detaylarını [https://github.com/BetulBircan/ShopForProduct/blob/main/shopproduct-app/src/views/PopularItem.vue](https://github.com/BetulBircan/ShopForProduct/blob/main/shopproduct-app/src/views/PopularItem.vue)  kısmından inceleyebilirsiniz.
+ ```
+ <template>
+    <PopularItemSection />
+</template>
+
+<script>
+import PopularItemSection from '@/components/Section/PopularItemSection.vue';
+export default {
+components : {
+    PopularItemSection
+}
+}
+</script>
+```
+
+Proje Adresi : [https://shop-for-product.vercel.app](https://shop-for-product.vercel.app)
 
